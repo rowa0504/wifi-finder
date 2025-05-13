@@ -36,13 +36,16 @@ test('user can delete their account', function () {
     $response = $this
         ->actingAs($user)
         ->delete('/settings/profile', [
-            'password' => 'password',
+            'password' => 'password',  // ユーザーのパスワード
         ]);
 
     $response
         ->assertSessionHasNoErrors()
         ->assertRedirect('/');
 
-    $this->assertGuest();
-    expect($user->fresh())->toBeNull();
+    // ログアウト処理を追加
+    $this->assertGuest();  // ユーザーがログアウトされてゲスト状態か確認
+
+    // ユーザーが削除されたことを確認
+    expect($user->fresh())->toBeNull();  // fresh() でユーザーが削除されているか確認
 });

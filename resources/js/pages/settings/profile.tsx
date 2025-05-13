@@ -41,7 +41,6 @@ export default function Profile() {
     };
 
     const {
-        data: avatarData,
         setData: setAvatarData,
         post: postAvatar,
         processing: avatarUploading,
