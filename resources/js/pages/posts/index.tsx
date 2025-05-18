@@ -1,9 +1,20 @@
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import AppLayout from '@/layouts/app-layout';
 import { faLocationDot, faWifi } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Head, Link, router, usePage } from '@inertiajs/react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+
+// ユーザー名からイニシャルを取得する関数
+function getInitials(name?: string): string {
+    if (!name) return '';
+    return name
+        .split(' ')
+        .map((n) => n[0])
+        .join('')
+        .toUpperCase();
+}
 
 interface Review {
     id: number;
@@ -22,7 +33,7 @@ interface Post {
     longitude: number;
     speed: number;
     description: string;
-    user?: { id: number; name: string };
+    user?: { id: number; name: string; avatar?: string };
     reviews?: Review[];
 }
 
@@ -144,21 +155,31 @@ const Index: React.FC<IndexProps> = ({ posts, categories, filters }) => {
                 {/* 投稿リスト */}
                 {displayedPosts.map((post) => (
                     <div key={post.id} className="mb-4 rounded border p-4 shadow">
+                        <div className="my-1 flex items-center space-x-3">
+                            <Avatar className="h-8 w-8 overflow-hidden rounded-full">
+                                <AvatarImage src={post.user?.avatar} alt={post.user?.name || ''} />
+                                <AvatarFallback className="rounded-lg bg-neutral-200 text-black dark:bg-neutral-700 dark:text-white">
+                                    {getInitials(post.user?.name)}
+                                </AvatarFallback>
+                            </Avatar>
+                            <span className="text-sm font-medium">{post.user?.name}</span>
+                        </div>
                         <h2 className="text-xl font-semibold">
-                            {post.place} - {post.wifi_name}
+                            {post.place} - <FontAwesomeIcon icon={faWifi} /> {post.wifi_name}
                         </h2>
                         <p>
                             <strong>Category:</strong> {post.category?.name}
                         </p>
-                        <p>
-                            <strong>Speed:</strong> {post.speed} Mbps
-                        </p>
-                        <p>
-                            <strong>Description:</strong> {post.description}
-                        </p>
-                        <p>
-                            <strong>User:</strong> {post.user?.name}
-                        </p>
+                        {post.speed !== null && post.speed !== undefined && (
+                            <p>
+                                <strong>Speed:</strong> {post.speed} Mbps
+                            </p>
+                        )}
+                        {post.description && (
+                            <p>
+                                <strong>Description:</strong> {post.description}
+                            </p>
+                        )}
                         <p>
                             <a
                                 href={`https://www.google.com/maps?q=${post.latitude},${post.longitude}`}
