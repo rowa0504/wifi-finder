@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
@@ -64,9 +65,17 @@ class ProfileController extends Controller
     /**
      * Delete the user's account.
      */
+
     public function destroy(Request $request): RedirectResponse
     {
+        Auth::logout(); // ログアウト処理
+
         $request->user()->delete();
-        return redirect()->route('home');
+
+        // セッションを無効化 & トークン再生成
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('/');
     }
 }
