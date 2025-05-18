@@ -1,4 +1,6 @@
 import AppLayout from '@/layouts/app-layout';
+import { faWifi } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Head, useForm } from '@inertiajs/react';
 import React from 'react';
 
@@ -51,9 +53,10 @@ const Create: React.FC<Props> = ({ post }) => {
         <AppLayout>
             <Head title="Add Review" />
             <div className="mx-auto max-w-2xl p-6">
-                <div className="rounded-2xl bg-white p-6 shadow">
+                <div className="max-w-sm mx-auto mt-10 p-6 bg-white rounded-lg shadow-md font-sans">
                     <h1 className="mb-6 text-2xl font-bold text-gray-800">
-                        Rate: <span className="text-blue-600">{post.place}</span> - {post.wifi_name}
+                        Rate: <span>{post.place}</span>
+                        <div><FontAwesomeIcon icon={faWifi} /> {post.wifi_name}</div>
                     </h1>
 
                     <form onSubmit={handleSubmit} className="space-y-6">

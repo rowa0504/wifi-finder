@@ -24,7 +24,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi with purchase. Comfortable seating.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 3,
             'category_id' => 1,
             'place' => 'Starbucks Cebu',
             'wifi_name' => 'STARBUCKS_WIFI',
@@ -36,7 +36,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi with purchase. Cozy atmosphere.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 4,
             'category_id' => 1,
             'place' => 'Cafe Laguna',
             'wifi_name' => 'LAGUNA_WIFI',
@@ -48,7 +48,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi with purchase. Great ambiance.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 5,
             'category_id' => 1,
             'place' => 'The Coffee Bean & Tea Leaf',
             'wifi_name' => 'CBTL_WIFI',
@@ -60,7 +60,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi with purchase. Relaxing environment.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 6,
             'category_id' => 3,
             'place' => 'Dunkin Donuts',
             'wifi_name' => 'DUNKIN_WIFI',
@@ -72,7 +72,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi with purchase. Quick service.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 7,
             'category_id' => 3,
             'place' => 'McDonald\'s',
             'wifi_name' => 'MCDO_WIFI',
@@ -84,7 +84,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi with purchase. Fast food.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 8,
             'category_id' => 3,
             'place' => 'Jollibee',
             'wifi_name' => 'JOLLIBEE_WIFI',
@@ -96,7 +96,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi with purchase. Family-friendly.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 9,
             'category_id' => 3,
             'place' => 'KFC',
             'wifi_name' => 'KFC_WIFI',
@@ -108,7 +108,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi with purchase. Fast food.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 10,
             'category_id' => 4,
             'place' => 'Ayala Center Cebu',
             'wifi_name' => 'AYALA_WIFI',
@@ -132,7 +132,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the mall. Shopping and dining.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 3,
             'category_id' => 4,
             'place' => 'Robinsons Galleria Cebu',
             'wifi_name' => 'ROBINSONS_WIFI',
@@ -144,7 +144,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the mall. Shopping and dining.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 4,
             'category_id' => 4,
             'place' => 'SM Seaside City Cebu',
             'wifi_name' => 'SM_SEASIDE_WIFI',
@@ -156,7 +156,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the mall. Shopping and dining.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 5,
             'category_id' => 5,
             'place' => 'Radisson Blu Cebu',
             'wifi_name' => 'RADISSON_WIFI',
@@ -168,7 +168,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi for guests. Luxury hotel.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 6,
             'category_id' => 5,
             'place' => 'Shangri-La Mactan Resort and Spa',
             'wifi_name' => 'SHANGRILA_WIFI',
@@ -180,7 +180,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi for guests. Luxury resort.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 7,
             'category_id' => 5,
             'place' => 'Marco Polo Plaza Cebu',
             'wifi_name' => 'MARCO_POLO_WIFI',
@@ -192,7 +192,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi for guests. Luxury hotel.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 8,
             'category_id' => 5,
             'place' => 'Waterfront Cebu City Hotel and Casino',
             'wifi_name' => 'WATERFRONT_WIFI',
@@ -204,7 +204,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi for guests. Luxury hotel.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 9,
             'category_id' => 6,
             'place' => 'Mactan-Cebu International Airport',
             'wifi_name' => 'MCIA_WIFI',
@@ -216,7 +216,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the airport. Travel hub.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 10,
             'category_id' => 6,
             'place' => 'Cebu North Bus Terminal',
             'wifi_name' => 'CNBT_WIFI',
@@ -228,7 +228,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the bus terminal. Travel hub.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 1,
             'category_id' => 6,
             'place' => 'Cebu South Bus Terminal',
             'wifi_name' => 'CSBT_WIFI',
@@ -252,7 +252,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the pier. Travel hub.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 3,
             'category_id' => 7,
             'place' => 'Ayala Center Cebu',
             'wifi_name' => 'AYALA_WIFI',
@@ -264,7 +264,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the mall. Shopping and dining.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 4,
             'category_id' => 7,
             'place' => 'SM City Cebu',
             'wifi_name' => 'SM_WIFI',
@@ -276,7 +276,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the mall. Shopping and dining.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 5,
             'category_id' => 7,
             'place' => 'Robinsons Galleria Cebu',
             'wifi_name' => 'ROBINSONS_WIFI',
@@ -288,7 +288,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the mall. Shopping and dining.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 6,
             'category_id' => 7,
             'place' => 'SM Seaside City Cebu',
             'wifi_name' => 'SM_SEASIDE_WIFI',
@@ -300,7 +300,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi in the mall. Shopping and dining.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 7,
             'category_id' => 8,
             'place' => 'Co-working Space Cebu',
             'wifi_name' => 'COWORKING_WIFI',
@@ -312,7 +312,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi for members. Productive environment.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 8,
             'category_id' => 8,
             'place' => 'The Company Cebu',
             'wifi_name' => 'THE_COMPANY_WIFI',
@@ -324,7 +324,7 @@ class PostSeeder extends Seeder
             'description' => 'Free Wi-Fi for members. Productive environment.',
         ]);
         Post::create([
-            'user_id' => 2,
+            'user_id' => 9,
             'category_id' => 8,
             'place' => 'Hive Cebu',
             'wifi_name' => 'HIVE_WIFI',

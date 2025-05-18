@@ -14,18 +14,19 @@ const ContactForm: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would typically send the form data to your backend
         setSubmitted(true);
     };
 
     return (
-        <div style={styles.container}>
-            <h2 style={styles.heading}>Contact Us</h2>
+        <div className="max-w-sm mx-auto mt-10 p-6 bg-white rounded-lg shadow-md font-sans">
+            <h2 className="text-center mb-6 text-gray-800 text-xl font-semibold">Contact Us</h2>
             {submitted ? (
-                <div style={styles.success}>Thank you for reaching out! We'll get back to you soon.</div>
+                <div className="text-green-600 bg-green-50 p-4 rounded-md text-center font-medium">
+                    Thank you for reaching out! We'll get back to you soon.
+                </div>
             ) : (
-                <form onSubmit={handleSubmit} style={styles.form}>
-                    <label style={styles.label}>
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                    <label className="flex flex-col font-medium text-gray-700 text-sm">
                         Name
                         <input
                             type="text"
@@ -33,11 +34,11 @@ const ContactForm: React.FC = () => {
                             value={form.name}
                             onChange={handleChange}
                             required
-                            style={styles.input}
+                            className="mt-1 px-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Your Name"
                         />
                     </label>
-                    <label style={styles.label}>
+                    <label className="flex flex-col font-medium text-gray-700 text-sm">
                         Email
                         <input
                             type="email"
@@ -45,30 +46,32 @@ const ContactForm: React.FC = () => {
                             value={form.email}
                             onChange={handleChange}
                             required
-                            style={styles.input}
+                            className="mt-1 px-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="you@example.com"
                         />
                     </label>
-                    <label style={styles.label}>
+                    <label className="flex flex-col font-medium text-gray-700 text-sm">
                         Message
                         <textarea
                             name="message"
                             value={form.message}
                             onChange={handleChange}
                             required
-                            style={styles.textarea}
+                            className="mt-1 px-3 py-2 border border-slate-300 rounded-md text-sm resize-y focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="How can we help you?"
                             rows={5}
                         />
                     </label>
-                    <button type="submit" style={styles.button}>
+                    <button
+                        type="submit"
+                        className="mt-2 py-2 bg-blue-600 text-white rounded-md font-semibold text-base hover:bg-blue-700 transition"
+                    >
                         Send Message
                     </button>
-
                     <button
                         type="button"
-                        style={{ ...styles.button, background: '#a0aec0', marginTop: 0 }}
                         onClick={() => window.history.back()}
+                        className="py-2 bg-gray-400 text-white rounded-md font-semibold text-base hover:bg-gray-500 transition"
                     >
                         Back
                     </button>
@@ -76,70 +79,6 @@ const ContactForm: React.FC = () => {
             )}
         </div>
     );
-};
-
-const styles: { [key: string]: React.CSSProperties } = {
-    container: {
-        maxWidth: 400,
-        margin: '40px auto',
-        padding: 24,
-        background: '#fff',
-        borderRadius: 8,
-        boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-        fontFamily: 'Segoe UI, Arial, sans-serif',
-    },
-    heading: {
-        textAlign: 'center',
-        marginBottom: 24,
-        color: '#1a202c',
-    },
-    form: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 16,
-    },
-    label: {
-        display: 'flex',
-        flexDirection: 'column',
-        fontWeight: 500,
-        color: '#2d3748',
-        fontSize: 15,
-    },
-    input: {
-        marginTop: 6,
-        padding: '8px 10px',
-        borderRadius: 4,
-        border: '1px solid #cbd5e1',
-        fontSize: 15,
-    },
-    textarea: {
-        marginTop: 6,
-        padding: '8px 10px',
-        borderRadius: 4,
-        border: '1px solid #cbd5e1',
-        fontSize: 15,
-        resize: 'vertical',
-    },
-    button: {
-        marginTop: 8,
-        padding: '10px 0',
-        background: '#3182ce',
-        color: '#fff',
-        border: 'none',
-        borderRadius: 4,
-        fontWeight: 600,
-        fontSize: 16,
-        cursor: 'pointer',
-        transition: 'background 0.2s',
-    },
-    success: {
-        color: '#38a169',
-        background: '#f0fff4',
-        padding: 16,
-        borderRadius: 6,
-        textAlign: 'center',
-        fontWeight: 500,
-    },
 };
 
 export default ContactForm;

@@ -27,7 +27,7 @@ class PostController extends Controller
         }
 
         return inertia('posts/index', [
-            'posts' => $query->paginate(5)->withQueryString(),
+            'posts' => $query->latest()->paginate(5)->withQueryString(),
             'categories' => Category::all(),
             'filters' => $request->only(['category_id', 'search']),
         ]);
@@ -47,7 +47,7 @@ class PostController extends Controller
             'wifi_name' => 'required|string|max:255',
             'category_id' => 'required|integer',
             'location' => 'required|string', // ここは後でlatitudeとlongitudeに分ける
-            'speed' => 'required|numeric',
+            'speed' => 'nullable|numeric',
             'description' => 'nullable|string',
         ]);
 
