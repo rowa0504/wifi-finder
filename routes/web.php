@@ -10,8 +10,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
-    return Inertia::render('welcome');
-})->name('home');
+    return redirect()->route('login');
+});
 
 Route::middleware([
     'auth',
